@@ -411,4 +411,26 @@ return(data())
     })
     })
   
+  output$plot1<-renderPlot({
+    input$run
+    isolate({
+      if(control$autostart){
+        attach(data())
+        plot(Maturity,Pt,type="o",main="PD Curve (method 1)")
+        detach(data())
+      }
+    })
+  })
+  
+  output$plot2<-renderPlot({
+    input$run
+    isolate({
+      if(control$autostart){
+        attach(data2())
+        plot(Maturity,Pt,type="o",main="PD Curve (method 2)")
+        detach(data2())
+      }
+    })
+  })
+  
 })
