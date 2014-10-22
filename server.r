@@ -417,6 +417,7 @@ return(data())
       if(control$autostart){
         attach(data())
         plot(Maturity,Pt,type="o",main="PD Curve (method 1)")
+        grid()
         detach(data())
       }
     })
@@ -428,6 +429,7 @@ return(data())
       if(control$autostart){
         attach(data2())
         plot(Maturity,Pt,type="o",main="PD Curve (method 2)")
+        grid()
         detach(data2())
       }
     })
