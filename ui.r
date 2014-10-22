@@ -54,8 +54,10 @@ shinyUI(fluidPage(
   h4("-----------------------------------------"),
   textOutput("text1"),
   tableOutput("method1"),
+  plotOutput("plot1"),
   textOutput("text2"),
-  tableOutput("method2")
+  tableOutput("method2"),
+  plotOutput("plot2")
   #plotOutput("ccarplot1",width=800,height=600),
   #plotOutput("ccarplot2",width=800,height=600)
   #verbatimTextOutput("summary"),
