@@ -13,7 +13,8 @@ shinyUI(fluidPage(
   
   # Application title.
   titlePanel("Bootstrapping default probability curves"),
-  
+  sidebarLayout(
+    sidebarPanel(
   h4("Input CDS Spread"),
   
   numericInput(inputId="s1",
@@ -44,20 +45,22 @@ shinyUI(fluidPage(
   numericInput(inputId="alpha",
                label="Alpha",value=1),
   
-  actionButton("run","Start Bootstrapping"),
+  actionButton("run","Start Bootstrapping")),
   
   
   # Show a summary of the dataset and an HTML table with the
   # requested number of observations. Note the use of the h4
   # function to provide an additional header above each output
   # section.
-  h4("-----------------------------------------"),
+  
+    mainPanel(
+    
   h3(textOutput("text1")),
   tableOutput("method1"),
   plotOutput("plot1",width = 800, height=600),
   h3(textOutput("text2")),
   tableOutput("method2"),
-  plotOutput("plot2",width = 800, height=600)
+  plotOutput("plot2",width = 800, height=600))
   #plotOutput("ccarplot1",width=800,height=600),
   #plotOutput("ccarplot2",width=800,height=600)
   #verbatimTextOutput("summary"),
@@ -65,4 +68,5 @@ shinyUI(fluidPage(
   #h4("Observations"),
   #tableOutput("view")
   
-)    )
+)
+  ))
