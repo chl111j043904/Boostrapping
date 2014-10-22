@@ -52,12 +52,12 @@ shinyUI(fluidPage(
   # function to provide an additional header above each output
   # section.
   h4("-----------------------------------------"),
-  textOutput("text1"),
+  h3(textOutput("text1")),
   tableOutput("method1"),
-  plotOutput("plot1"),
-  textOutput("text2"),
+  plotOutput("plot1",width = 800, height=600),
+  h3(textOutput("text2")),
   tableOutput("method2"),
-  plotOutput("plot2")
+  plotOutput("plot2",width = 800, height=600)
   #plotOutput("ccarplot1",width=800,height=600),
   #plotOutput("ccarplot2",width=800,height=600)
   #verbatimTextOutput("summary"),
