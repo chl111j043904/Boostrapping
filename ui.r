@@ -56,12 +56,12 @@ shinyUI(fluidPage(
     mainPanel(
     
   h3(textOutput("text1")),
-  plotOutput("plot1",width = 800, height=600),
   tableOutput("method1"),
+  plotOutput("plot1",width = 800, height=600),
   
   h3(textOutput("text2")),
-  plotOutput("plot2",width = 800, height=600)),
-  tableOutput("method2")
+  tableOutput("method2"),
+  plotOutput("plot2",width = 800, height=600))
   
   #plotOutput("ccarplot1",width=800,height=600),
   #plotOutput("ccarplot2",width=800,height=600)
