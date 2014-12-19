@@ -144,12 +144,12 @@ shinyServer(function(input, output) {
   data2<-reactive({
     library(zoo)
     CDS_Spread<-data.frame(tenor=c(1,2,3,5,7,10),
-                           CDS=c(0.048,0.055,0.06,0.075,0.081,0.0896))
-    data<-data.frame(Maturity=seq(0,10,by=0.5))
-    
-    rf=0.05 #risk free
-    R=0.3   #Recovery Rate
-    alpha=1 #A parameter
+                                                 CDS=c(input$s1,input$s2,input$s3,input$s4,input$s5,input$s6))
+                          data<-data.frame(Maturity=seq(0,10,by=0.5))
+                          
+                          rf=input$rf #risk free
+                          R=input$R   #Recovery Rate
+                          alpha=input$alpha #A parameter
     
     #Define Function to solve equation (method 2)
     bisection<-function(Fun,a,b,c){
